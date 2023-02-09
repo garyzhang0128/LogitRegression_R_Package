@@ -1,0 +1,19 @@
+Package: logitRegression
+Version: 0.1.0
+Date: 2021-01-25
+Title: The R Package logitRegression for Logistic Regression
+Author: Gary Gengyuan ZHANG
+Depends: R(>= 3.5.0),MASS
+Description: Functionally used to solve logistic regression models and logistic 
+             regression models with L2 norm regularization. Solving algorithms 
+             include gradient descent, accelerated gradient, and Newton methods,
+             and include the data set "breast_cancer_wisconsin".
+Maintainer: Gary Gengyuan ZHANG <garyzhang0128@stu.xjtu.edu.cn>
+License: GPL
+NeedsCompilation: no
+Packaged: 2021-01-25 18:32:11 UTC; GaryZhang
+Encoding: UTF-8
+LazyData: true
+Repository: https://github.com/garyzhang0128/logitRegression_R_package
+Date/Publication: 2021-01-25 13:40:44
+Built: R 4.0.3; ; 2021-01-25 18:33:39 UTC; windows

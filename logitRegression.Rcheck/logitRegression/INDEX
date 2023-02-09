@@ -1,0 +1,3 @@
+logitRegression         Solve Logistic Regression
+lossFunction            calcute the loss of log maximum likelihood
+predict                 Predict a data set using Logistic Regression

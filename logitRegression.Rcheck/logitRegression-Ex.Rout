@@ -1,0 +1,77 @@
+
+R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "logitRegression"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> base::assign(".ExTimings", "logitRegression-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('logitRegression')
+Loading required package: MASS
+
+Attaching package: 'logitRegression'
+
+The following object is masked from 'package:stats':
+
+    predict
+
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("logitRegression")
+> ### * logitRegression
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: logitRegression
+> ### Title: Solve Logistic Regression
+> ### Aliases: logitRegression
+> 
+> ### ** Examples
+> 
+> # import dataset
+> data("breast_cancer_wisconsin")
+> 
+> # generate input
+> X = df[, 2:10]
+> X = as.matrix(X)
+> X = cbind(X, c(1)) # create bias
+> colnames(X)[10] = "intercept"
+> y = df[11] # class
+> set.seed(1)
+> w = as.matrix(rnorm(10)) # init w
+> 
+> # solve Logit Regression with Gradient Descent Method
+> logitRegresion(X,w,y,method = "gradDesc",L2 = FALSE,alpha = 1,iter = 100000,lamda = 0.0001,eps = 0.001)
+Error in logitRegresion(X, w, y, method = "gradDesc", L2 = FALSE, alpha = 1,  : 
+  could not find function "logitRegresion"
+Execution halted

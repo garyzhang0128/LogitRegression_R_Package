@@ -1,0 +1,27 @@
+* installing *source* package 'logitRegression' ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+Warning: 坏标记（额外的空间？）在logitRegression.Rd：5：25
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:11: unexpected section header '\usage'
+Warning: 坏标记（额外的空间？）在lossFunction.Rd：12：24
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:15: unexpected section header '\arguments'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:16: unknown macro '\item'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:17: unknown macro '\item'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:18: unknown macro '\item'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:19: unknown macro '\item'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:20: unknown macro '\item'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:21: unknown macro '\item'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:23: unexpected section header '\examples'
+Warning: C:/Users/GaryZhang/Documents/Coding/R/logitregre/logitRegression.Rcheck/00_pkg_src/logitRegression/man/lossFunction.Rd:39: unexpected END_OF_INPUT '
+'
+Warning: 坏标记（额外的空间？）在predict.Rd：15：17
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (logitRegression)
