@@ -1,0 +1,83 @@
+---
+title: "test"
+output: html_notebook
+---
+
+```{r}
+library(logitRegression)
+data("breast_cancer_wisconsin")
+```
+
+# test of logitRegression
+
+```{r}
+# generate input
+X = df[, 2:10]
+X = as.matrix(X)
+X = cbind(X, c(1)) # create bias
+colnames(X)[10] = "intercept"
+y = df[11] # class
+set.seed(1)
+w = as.matrix(rnorm(10)) # init w
+
+# solve Logit Regression with Gradient Descent Method
+w1 = logitRegression(X,w,y,method = "gradDesc",L2 = FALSE,alpha = 1,iter = 100000,lamda = 0.0001,eps = 0.001)
+print(w1)
+
+# solve Logit Regression with Gradient Descent Method and L2 norm
+w2 = logitRegression(X,w,y,method = "gradDesc",L2 = TRUE,alpha = 1,iter = 100000,lamda = 0.0001,eps = 0.001)
+print(w2)
+
+# solve Logit Regression with Newton's Method
+w3 = logitRegression(X,w,y,method = "nesGrad",L2 = FALSE,alpha = 1,iter = 10000,lamda = 0.0001,eps = 0.001)
+print(w3)
+
+# solve Logit Regression with Newton's Method and L2 norm
+w4 = logitRegression(X,w,y,method = "nesGrad",L2 = TRUE,alpha = 1,iter = 10000,lamda = 0.0001,eps = 0.001)
+print(w4)
+
+# solve Logit Regression with (Nesterov) Acclerated Gradient Method
+w5 = logitRegression(X,w,y,method = "newton",L2 = FALSE,alpha = 1,iter = 1000,lamda = 0.1,eps = 0.001)
+print(w5)
+
+# solve Logit Regression with (Nesterov) Acclerated Gradient Method and L2 norm
+w6 = logitRegression(X,w,y,method = "newton",L2 = TRUE,alpha = 1,iter = 1000,lamda = 0.1,eps = 0.001)
+print(w6)
+```
+
+# test of predict
+
+```{r}
+# generate input
+X = df[0:600, 2:10]
+X = as.matrix(X)
+X = cbind(X, c(1)) # create bias
+colnames(X)[10] = "intercept"
+y = df[0:600, 11] # class
+set.seed(1)
+w = as.matrix(rnorm(10)) # init w
+
+# solve Logit Regression with Gradient Descent Method
+w = logitRegression(X,w,y,method = "gradDesc",L2 = FALSE,alpha = 1,iter = 100000,lamda = 0.0001,eps = 0.001)
+
+# predict
+newdata = as.matrix(df[601:699, 2:10])
+print(predict(newdata,w))
+```
+
+# test of lossFunction
+
+```{r}
+X = df[, 2:10]
+X = as.matrix(X)
+X = cbind(X, c(1)) # create bias
+colnames(X)[10] = "intercept"
+y = df[11] # class
+set.seed(1)
+w = as.matrix(rnorm(10)) # init w
+
+# calculate the loss of log maximum likelihood
+loss = lossFunction(X,w,y)
+print(loss)
+```
+
